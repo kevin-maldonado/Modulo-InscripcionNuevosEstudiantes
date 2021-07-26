@@ -12,7 +12,11 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+//request del tipo get, put// 
+/*Route::get('/', function () {
+    $name = 'Prueba';
+    return view('welcome', ['name' => $name]);
+});*/
+Route::get('/excel', 'App\Http\Controllers\ExcelController@index')->name('index');
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
